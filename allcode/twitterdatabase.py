@@ -3,7 +3,7 @@ import json
 import os
 from dotenv import load_dotenv, find_dotenv
 
-load_dotenv("D:\\fixedJohnOliver\.env")
+load_dotenv("D:\PublicNBAWebsite\.env")
 client = tweepy.Client(os.getenv("TWITTERBEARER_TOKEN"), os.getenv("TWITTERCONSUMER_KEY"), os.getenv("TWITTERCOSUMER_SECRET"), os.getenv("TWITTERACCESS_TOKEN"), os.getenv("TWITTERACCESS_TOKEN_SECRET"))
 
 userShams = "ShamsCharania"
@@ -12,7 +12,7 @@ filename = 'nbanews.json'
 lst = []
 data, _, _, _, = client.get_user(username=userShams)
 ShamsID = data.get("id")
-
+'''
 with open(filename, mode='w+') as f:
     tweets = client.get_users_tweets(id=ShamsID, max_results=5)
     current_id = tweets[3].get("newest_id")

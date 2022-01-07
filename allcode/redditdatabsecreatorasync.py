@@ -6,7 +6,7 @@ import asyncio
 import os
 from dotenv import load_dotenv, find_dotenv
 
-load_dotenv("D:\\fixedJohnOliver\.env")
+load_dotenv("D:\PublicNBAWebsite\.env")
 # set pandas viewing options
 pd.set_option("display.max_columns", None)
 pd.set_option('display.width', None)
