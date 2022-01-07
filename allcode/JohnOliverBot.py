@@ -8,7 +8,7 @@ import discord
 import pickle
 from dotenv import load_dotenv, find_dotenv
 
-load_dotenv("D:\\fixedJohnOliver\.env")
+load_dotenv("D:\PublicNBAWebsite\.env")
 
 token = os.getenv("DISCORDTOKEN")
 guild = "Steelcrawler's serverdasfasd"

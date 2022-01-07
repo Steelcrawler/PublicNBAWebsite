@@ -5,7 +5,7 @@ import re
 import os
 from dotenv import load_dotenv, find_dotenv
 
-load_dotenv("D:\\fixedJohnOliver\.env")
+load_dotenv("D:\PublicNBAWebsite\.env")
 client = tweepy.Client(os.getenv("TWITTERBEARER_TOKEN"), os.getenv("TWITTERCONSUMER_KEY"), os.getenv("TWITTERCOSUMER_SECRET"), os.getenv("TWITTERACCESS_TOKEN"), os.getenv("TWITTERACCESS_TOKEN_SECRET"))
 
 userShams = "ShamsCharania"

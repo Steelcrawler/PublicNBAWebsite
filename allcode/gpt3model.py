@@ -5,7 +5,7 @@ import openai
 import json 
 from dotenv import load_dotenv, find_dotenv
 
-load_dotenv("D:\\fixedJohnOliver\.env")
+load_dotenv("D:\PublicNBAWebsite\.env")
 
 openai.api_key = os.getenv('OPENAITOKEN')
 #uploadedfilejson = openai.File.create(file=open("nba_prepared.jsonl", encoding="utf8", errors="ignore"), purpose='fine-tune')

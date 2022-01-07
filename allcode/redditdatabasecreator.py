@@ -5,7 +5,7 @@ import os
 import json
 from dotenv import load_dotenv, find_dotenv
 
-load_dotenv("D:\\fixedJohnOliver\.env")
+load_dotenv("D:\PublicNBAWebsite\.env")
 reddit = praw.Reddit(
     client_id=os.getenv("REDDITCLIENTID"),
     client_secret=os.getenv("REDDITCLIENTSECRET"),
