@@ -1,27 +1,16 @@
-const OpenAI = require('openai-api');
-require('dotenv').config();
+import { OpenAI}from 'gpt-x';
+import dotenv from 'dotenv';
+dotenv.config();
+console.log(process.env.OPENAITOKEN)
 // Load your key from an environment variable or secret management service
 // (do not include your key directly in your code)
-const OPENAITOKEN = process.env.OPENAITOKEN;
-const openai = new OpenAI(OPENAITOKEN);
-function getFullSentence(prompt) {
-    (async () => {
-        const gptResponse = await openai.complete({
-            engine: 'davinci',
-            model: 'ada:ft-thegoats-2022-01-07-03-13-15',
-            prompt: prompt,
-            maxTokens: 5,
-            temperature: 0.9,
-            topP: 1,
-            presencePenalty: 0,
-            frequencyPenalty: 0,
-            bestOf: 1,
-            n: 1,
-            stream: false,
-            stop: ['\n', "testing"]
-        });
+const openai = new OpenAI(process.env.API_KEY, 'thegoats');
+async function getFullSentence(prompt) {
+    const completion = await openai.completeFromModel('ada:ft-thegoats-2022-01-07-03-13-15', {
+        prompt: prompt
+    });
 
-        return gptResponse.data[1];
-    })();
+    return completion;
 }
 console.log(getFullSentence("Stephen Curry has recently"));
+
