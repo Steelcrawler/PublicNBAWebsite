@@ -18,7 +18,7 @@ userWoj = "wojespn"
 dataWoj, _, _, _, = client.get_user(username=userWoj)
 WojID = dataWoj.get("id")
 print(WojID)
-'''
+
 with jsonlines.open('nba.jsonl', mode='a') as writer:
 
     tweetsShams = client.get_users_tweets(id=ShamsID, max_results=5)
@@ -53,9 +53,8 @@ with jsonlines.open('nba.jsonl', mode='a') as writer:
             completion_start = fifth_space+1
             writer.write({"prompt": cleaned_string[:fifth_space], "completion": cleaned_string[completion_start:]})
     
-    #writer.write_all(lst)
+    writer.write_all(lst)
     #json.dump(lst, f)
-'''
 
 
         
