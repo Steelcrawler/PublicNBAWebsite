@@ -1,3 +1,1 @@
-Hello!
-
-This is some of the code used to a) create a database of nba news b) Train the model and c) create/deploy a website.
+This code uses a finetuned OpenAI's GPT-3 with NBA news data to create a bot that generates realistic but made-up NBA news
